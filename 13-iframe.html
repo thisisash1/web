@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- iframe : html 페이지 내 다른 html을 삽입해서 사용하는 기술 -->
+    <!-- iframe이란 태그를 이용해서 다른 html 페이지를 불러올 수 있음 -->
+    <div>
+      <a href="javascript:goToMenu(./13-iframe-content1.html)">menu1</a>
+      <a href="javascript:goToMenu(./13-iframe-content2.html)">menu2</a>
+      <a href="">menu3</a>
+      <a href="">menu4</a>
+      <a href="">menu5</a>
+    </div>
+    <div>
+      <iframe
+        src="./13-iframe-content1.html"
+        id="ifrm"
+        frameborder="0"
+      ></iframe>
+    </div>
+    <div>
+      <footer>footer</footer>
+      <script>
+        function goToMenu(path) {
+          document.getElementById("ifrm").src = path;
+        }
+      </script>
+    </div>
+  </body>
+</html>
